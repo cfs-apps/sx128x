@@ -1,0 +1,28 @@
+{ "app": {
+   
+   "title": "SX128X",
+   "version": "1.0.0",
+   "supplier": "Standford University",
+   "copyright": "Standford",
+   "url": "https://github.com/cfs-apps/sx128x_lib",
+
+   "description": [
+      "C++ library for using the SX128x chip series on a Raspberry Pi"
+   ],
+
+   "cfs": {
+      "cfe-type": "CFE_LIB",
+      "obj-file": "sx128x",
+      "entry-symbol": "SX128X_LibInit",
+      "name": "SX128X",
+      "priority": 0,
+      "stack": 0,
+      "load_addr": 0,
+      "exception-action": 0,
+      "app-framework": "osk",
+      "tables": [],
+   },
+
+   "requires": []
+
+}}
