@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU Lesser General Public License as
+    published by the Free Software Foundation, either version 3 of the
+    License, or (at your option) any later version.
+  
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU Lesser General Public License for more details.
+  
+    You should have received a copy of the GNU Lesser General Public License
+    along with this program.  If not, see <https://www.gnu.org/licenses/>.
+      
+    Purpose: 
+      This describes all interface objects for the SX128X Library 
+
+    Notes:
+      1. This document adheres to the Electronic Data Sheet (EDS) XML schema 
+         as prescribed in CCSDS book 876.0. 
+
+      
+-->
+<PackageFile xmlns="http://www.ccsds.org/schema/sois/seds">
+  <Package name="SX128X" shortDescription="SX128X Library">
+    <DataTypeSet>
+ 
+      <!--***********************************-->
+      <!--**** DataTypeSet:  Entry Types ****-->
+      <!--***********************************-->
+
+      <!-- Radio Packets and Modulation Parameters -->
+
+      <EnumeratedDataType name="RadioPackets" shortDescription="Must match RadioPacketTypes_t" >
+        <IntegerDataEncoding sizeInBits="8" encoding="unsigned" />
+        <EnumerationList>
+          <Enumeration label="GFSK"    value="0"  shortDescription="" />
+          <Enumeration label="LORA"    value="1"  shortDescription="" />
+          <Enumeration label="RANGING" value="2"  shortDescription="" />
+          <Enumeration label="FLRC"    value="3"  shortDescription="" />
+          <Enumeration label="BLE"     value="4"  shortDescription="" />
+          <Enumeration label="NONE"    value="15" shortDescription="" />
+        </EnumerationList>
+      </EnumeratedDataType>
+
+      <EnumeratedDataType name="LoRaSpreadingFactor" shortDescription="Must match RadioLoRaSpreadingFactors_t" >
+        <IntegerDataEncoding sizeInBits="16" encoding="unsigned" />
+        <EnumerationList>
+          <Enumeration label="5"    value="80"  shortDescription="" />
+          <Enumeration label="6"    value="96"  shortDescription="" />
+          <Enumeration label="7"    value="112"  shortDescription="" />
+          <Enumeration label="8"    value="128"  shortDescription="" />
+          <Enumeration label="9"    value="144"  shortDescription="" />
+          <Enumeration label="10"   value="160"  shortDescription="" />
+          <Enumeration label="11"   value="176"  shortDescription="" />
+          <Enumeration label="12"   value="192"  shortDescription="" />
+        </EnumerationList>
+      </EnumeratedDataType>
+
+      <EnumeratedDataType name="LoRaBandwidth" shortDescription="Must match RadioLoRaBandwidths_t" >
+        <IntegerDataEncoding sizeInBits="16" encoding="unsigned" />
+        <EnumerationList>
+          <Enumeration label="0200"    value="52"  shortDescription="" />
+          <Enumeration label="0400"    value="38"  shortDescription="" />
+          <Enumeration label="0800"    value="24"  shortDescription="" />
+          <Enumeration label="1600"    value="10"  shortDescription="" />
+        </EnumerationList>
+      </EnumeratedDataType>
+
+      <EnumeratedDataType name="LoRaCodingRate" shortDescription="Must match RadioLoRaCodingRates_t" >
+        <IntegerDataEncoding sizeInBits="16" encoding="unsigned" />
+        <EnumerationList>
+          <Enumeration label="4_5"     value="1"  shortDescription="" />
+          <Enumeration label="4_6"     value="2"  shortDescription="" />
+          <Enumeration label="4_7"     value="3"  shortDescription="" />
+          <Enumeration label="4_8"     value="4"  shortDescription="" />
+          <Enumeration label="LI_4_5"  value="5"  shortDescription="" />
+          <Enumeration label="LI_4_6"  value="6"  shortDescription="" />
+          <Enumeration label="LI_4_7"  value="7"  shortDescription="" />
+        </EnumerationList>
+      </EnumeratedDataType>
+   
+    </DataTypeSet>    
+  </Package>
+</PackageFile>
