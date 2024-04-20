@@ -2,8 +2,8 @@
    
    "title": "SX128X",
    "version": "1.0.0",
-   "supplier": "Standford University",
-   "copyright": "Standford",
+   "supplier": "Stanford University",
+   "copyright": "Stanford",
    "url": "https://github.com/cfs-apps/sx128x_lib",
 
    "description": [
@@ -20,7 +20,7 @@
       "load_addr": 0,
       "exception-action": 0,
       "app-framework": "osk",
-      "tables": [],
+      "tables": []
    },
 
    "requires": []
