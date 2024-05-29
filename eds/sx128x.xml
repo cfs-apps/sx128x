@@ -45,7 +45,7 @@
         </EnumerationList>
       </EnumeratedDataType>
 
-      <EnumeratedDataType name="LoRaSpreadingFactor" shortDescription="Must match RadioLoRaSpreadingFactors_t" >
+      <EnumeratedDataType name="ModulationSpreadingFactor" shortDescription="Must match RadioLoRaSpreadingFactors_t" >
         <IntegerDataEncoding sizeInBits="16" encoding="unsigned" />
         <EnumerationList>
           <Enumeration label="5"    value="80"  shortDescription="" />
@@ -59,7 +59,7 @@
         </EnumerationList>
       </EnumeratedDataType>
 
-      <EnumeratedDataType name="LoRaBandwidth" shortDescription="Must match RadioLoRaBandwidths_t" >
+      <EnumeratedDataType name="ModulationBandwidth" shortDescription="Must match RadioLoRaBandwidths_t" >
         <IntegerDataEncoding sizeInBits="16" encoding="unsigned" />
         <EnumerationList>
           <Enumeration label="0200"    value="52"  shortDescription="" />
@@ -69,7 +69,7 @@
         </EnumerationList>
       </EnumeratedDataType>
 
-      <EnumeratedDataType name="LoRaCodingRate" shortDescription="Must match RadioLoRaCodingRates_t" >
+      <EnumeratedDataType name="ModulationCodingRate" shortDescription="Must match RadioLoRaCodingRates_t" >
         <IntegerDataEncoding sizeInBits="16" encoding="unsigned" />
         <EnumerationList>
           <Enumeration label="4_5"     value="1"  shortDescription="" />
@@ -79,6 +79,22 @@
           <Enumeration label="LI_4_5"  value="5"  shortDescription="" />
           <Enumeration label="LI_4_6"  value="6"  shortDescription="" />
           <Enumeration label="LI_4_7"  value="7"  shortDescription="" />
+        </EnumerationList>
+      </EnumeratedDataType>
+
+      <EnumeratedDataType name="PowerRegulatorMode" shortDescription="Power regulation used to power the device. Must match RadioRegulatorModes_t" >
+        <IntegerDataEncoding sizeInBits="16" encoding="unsigned" />
+        <EnumerationList>
+          <Enumeration label="USE_LDO"    value="0"  shortDescription="" />
+          <Enumeration label="USE_DCDC"   value="1"  shortDescription="" />
+        </EnumerationList>
+      </EnumeratedDataType>
+
+      <EnumeratedDataType name="StandbyMode" shortDescription="Oscillator in use while in standby mode. Must match RadioStandbyModes_t" >
+        <IntegerDataEncoding sizeInBits="16" encoding="unsigned" />
+        <EnumerationList>
+          <Enumeration label="RC"     value="0"  shortDescription="" />
+          <Enumeration label="XOSC"   value="1"  shortDescription="" />
         </EnumerationList>
       </EnumeratedDataType>
    

@@ -1,0 +1,19 @@
+{
+   "title": "SX128Xlibrary initialization file",
+   "description": ["Define runtime configurations",
+                    "RADIO_LORA_*: See SX128x.hpp for definitions"],
+   
+   "config": {
+      "RADIO_SPI_DEV_STR": "/dev/spidev0.0",
+      "RADIO_SPI_DEV_NUM": 0,
+      "RADIO_SPI_SPEED":   8000000,      
+      "RADIO_PIN_BUSY":  27,
+      "RADIO_PIN_NRST":  26,
+      "RADIO_PIN_NSS":   20,
+      "RADIO_PIN_DIO1":  16,
+      "RADIO_PIN_DIO2":  -1,
+      "RADIO_PIN_DIO3":  -1,
+      "RADIO_PIN_TX_EN": 24,
+      "RADIO_PIN_RX_EN": 25
+   }
+}
