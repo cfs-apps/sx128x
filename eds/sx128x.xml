@@ -33,19 +33,15 @@
 
       <!-- Radio Packets and Modulation Parameters -->
 
-      <EnumeratedDataType name="RadioPackets" shortDescription="Must match RadioPacketTypes_t" >
+      <EnumeratedDataType name="LowNoiseAmpMode" shortDescription="Must match SX128x.hpp RadioLnaSettings_t" >
         <IntegerDataEncoding sizeInBits="8" encoding="unsigned" />
         <EnumerationList>
-          <Enumeration label="GFSK"    value="0"  shortDescription="" />
-          <Enumeration label="LORA"    value="1"  shortDescription="" />
-          <Enumeration label="RANGING" value="2"  shortDescription="" />
-          <Enumeration label="FLRC"    value="3"  shortDescription="" />
-          <Enumeration label="BLE"     value="4"  shortDescription="" />
-          <Enumeration label="NONE"    value="15" shortDescription="" />
+          <Enumeration label="LOW_POWER"         value="0"  shortDescription="" />
+          <Enumeration label="HIGH_SENSITIVITY"  value="1"  shortDescription="" />
         </EnumerationList>
       </EnumeratedDataType>
-
-      <EnumeratedDataType name="ModulationSpreadingFactor" shortDescription="Must match RadioLoRaSpreadingFactors_t" >
+   
+      <EnumeratedDataType name="ModulationSpreadingFactor" shortDescription="Must match SX128x.hpp RadioLoRaSpreadingFactors_t" >
         <IntegerDataEncoding sizeInBits="16" encoding="unsigned" />
         <EnumerationList>
           <Enumeration label="5"    value="80"  shortDescription="" />
@@ -59,7 +55,7 @@
         </EnumerationList>
       </EnumeratedDataType>
 
-      <EnumeratedDataType name="ModulationBandwidth" shortDescription="Must match RadioLoRaBandwidths_t" >
+      <EnumeratedDataType name="ModulationBandwidth" shortDescription="Must match SX128x.hpp RadioLoRaBandwidths_t" >
         <IntegerDataEncoding sizeInBits="16" encoding="unsigned" />
         <EnumerationList>
           <Enumeration label="0200"    value="52"  shortDescription="" />
@@ -69,7 +65,7 @@
         </EnumerationList>
       </EnumeratedDataType>
 
-      <EnumeratedDataType name="ModulationCodingRate" shortDescription="Must match RadioLoRaCodingRates_t" >
+      <EnumeratedDataType name="ModulationCodingRate" shortDescription="Must match SX128x.hpp RadioLoRaCodingRates_t" >
         <IntegerDataEncoding sizeInBits="16" encoding="unsigned" />
         <EnumerationList>
           <Enumeration label="4_5"     value="1"  shortDescription="" />
@@ -82,7 +78,21 @@
         </EnumerationList>
       </EnumeratedDataType>
 
-      <EnumeratedDataType name="PowerRegulatorMode" shortDescription="Power regulation used to power the device. Must match RadioRegulatorModes_t" >
+      <EnumeratedDataType name="PowerAmpRampTime" shortDescription="Ramping time for power amplifier. Must match SX128x.hpp RadioRampTimes_t" >
+        <IntegerDataEncoding sizeInBits="16" encoding="unsigned" />
+        <EnumerationList>
+          <Enumeration label="02_US"  value="0"    shortDescription="RADIO_RAMP_02_US = 0x00" />
+          <Enumeration label="04_US"  value="32"   shortDescription="RADIO_RAMP_04_US = 0x20" />
+          <Enumeration label="06_US"  value="64"   shortDescription="RADIO_RAMP_06_US = 0x40" />
+          <Enumeration label="08_US"  value="96"   shortDescription="RADIO_RAMP_08_US = 0x60" />
+          <Enumeration label="10_US"  value="128"  shortDescription="RADIO_RAMP_10_US = 0x80" />
+          <Enumeration label="12_US"  value="160"  shortDescription="RADIO_RAMP_12_US = 0xA0" />
+          <Enumeration label="16_US"  value="192"  shortDescription="RADIO_RAMP_16_US = 0xC0" />
+          <Enumeration label="20_US"  value="224"  shortDescription="RADIO_RAMP_20_US = 0xE0" />
+        </EnumerationList>
+      </EnumeratedDataType>
+
+      <EnumeratedDataType name="PowerRegulatorMode" shortDescription="Power regulation used to power the device. Must match SX128x.hpp RadioRegulatorModes_t" >
         <IntegerDataEncoding sizeInBits="16" encoding="unsigned" />
         <EnumerationList>
           <Enumeration label="USE_LDO"    value="0"  shortDescription="" />
@@ -90,7 +100,19 @@
         </EnumerationList>
       </EnumeratedDataType>
 
-      <EnumeratedDataType name="StandbyMode" shortDescription="Oscillator in use while in standby mode. Must match RadioStandbyModes_t" >
+      <EnumeratedDataType name="RadioPackets" shortDescription="Must match SX128x.hpp RadioPacketTypes_t" >
+        <IntegerDataEncoding sizeInBits="8" encoding="unsigned" />
+        <EnumerationList>
+          <Enumeration label="GFSK"    value="0"  shortDescription="" />
+          <Enumeration label="LORA"    value="1"  shortDescription="" />
+          <Enumeration label="RANGING" value="2"  shortDescription="" />
+          <Enumeration label="FLRC"    value="3"  shortDescription="" />
+          <Enumeration label="BLE"     value="4"  shortDescription="" />
+          <Enumeration label="NONE"    value="15" shortDescription="" />
+        </EnumerationList>
+      </EnumeratedDataType>
+
+      <EnumeratedDataType name="StandbyMode" shortDescription="Oscillator in use while in standby mode. Must match SX128x.hpp RadioStandbyModes_t" >
         <IntegerDataEncoding sizeInBits="16" encoding="unsigned" />
         <EnumerationList>
           <Enumeration label="RC"     value="0"  shortDescription="" />

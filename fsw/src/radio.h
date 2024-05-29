@@ -74,6 +74,18 @@ bool RADIO_Constructor(const char *SpiDevStr, uint8_t SpiDevNum, const RADIO_Pin
 
 
 /******************************************************************************
+** Function: RADIO_SetLowNoiseAmpMode
+**
+** Set the radio power amp sensitivity
+**
+** Notes:
+**   None
+**
+*/
+bool RADIO_SetLowNoiseAmpMode(uint16_t LowNoiseAmpMode);
+
+
+/******************************************************************************
 ** Function: RADIO_SetModulationParams
 **
 ** Set the radio Lora Modulation parameters
@@ -97,6 +109,18 @@ bool RADIO_SetModulationParams(uint8_t SpreadingFactor,
 **
 */
 bool RADIO_SetRadioFrequency(uint32_t Frequency);
+
+
+/******************************************************************************
+** Function: RADIO_SetPowerAmpRampTime
+**
+** Set the radio power amp ramp time
+**
+** Notes:
+**   None
+**
+*/
+bool RADIO_SetPowerAmpRampTime(uint16_t PowerAmpRampTime);
 
 
 /******************************************************************************
